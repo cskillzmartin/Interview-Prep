@@ -1,0 +1,22 @@
+﻿@model List<KeyValuePair<int, List<int>>>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <div class="form-group">
+            Solution: @i.ToString()
+            Total: @Model[i].Key
+
+            @for (int j = 0; j < Model[i].Value.Count ; j++)
+            {
+                <div>
+                    @Model[i].Value[j].ToString()
+                </div>
+            }
+
+        </div>
+    }
+</div>

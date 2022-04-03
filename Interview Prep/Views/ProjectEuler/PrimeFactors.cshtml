@@ -1,0 +1,13 @@
+﻿@model System.Collections.Concurrent.ConcurrentDictionary<long, bool>
+@{
+    ViewBag.Title = "PrimeFactors";
+}
+
+
+@foreach(var v in Model)
+{
+    <h2>Number: @v.Key  IsPrime: @v.Value</h2>
+    <br/>
+}
+
+
